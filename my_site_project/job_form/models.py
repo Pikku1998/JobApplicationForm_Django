@@ -8,3 +8,6 @@ class Applicants(models.Model):
     email = models.EmailField()
     start_date = models.DateField()
     employment_status = models.CharField(choices=occupation.choices, max_length=15)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
